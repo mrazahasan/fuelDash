@@ -52,6 +52,15 @@ controllers.controller('loginCtrl', ['$scope', // The following is the construct
 
             }
 
+        };
+        if (window.StatusBar) {
+            // org.apache.cordova.statusbar required
+            if (cordova.platformId == 'android') {
+                StatusBar.backgroundColorByHexString("#2d944a");
+            }
+            else {
+                StatusBar.styleDefault();
+            }
         }
     }
 ]);

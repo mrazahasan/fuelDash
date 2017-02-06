@@ -45,15 +45,7 @@ app.run(function ($rootScope, $ionicPlatform, $ionicPopover, $location, $ionicPo
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
     }
-    if (window.StatusBar) {
-      // org.apache.cordova.statusbar required
-      if (cordova.platformId == 'android') {
-        StatusBar.backgroundColorByHexString("#2d944a");
-      }
-      else{
-        StatusBar.styleDefault();
-      }
-    }
+    
   });
   if (API.storage.isLoggedIn()) {
     $location.path('app/Home');
