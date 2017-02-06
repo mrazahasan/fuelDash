@@ -28,6 +28,10 @@ controllers.controller('loginCtrl', ['$scope', // The following is the construct
                 };
                 var loadObj = { condition: true, text: "Authentication....." };
                 $scope.APIService._http(config, loadObj).then(function (res) {
+                    $scope.loginData = {
+                        _username: '',
+                        _password: ''
+                    };
                     API.storage.set('isLoggedIn', true, false);
                     API.storage.set("loggedInInfo", res.data, false);
                     $scope.$state.go("app.home");
