@@ -1,0 +1,41 @@
+<ion-view title="Login" hide-nav-bar="true">
+  <ion-content padding="true" class="manual-ios-statusbar-padding loginPageBackground" scroll="true">
+    <div class="spacer" style="width: 300px; height: 66px;"></div>
+    <div class="list">
+      <div style="text-align:center;" class="show-list-numbers-and-dots">
+        <p class="loginPageTitle">Fuel D@sh</p>
+        <p class="signupPageFormTitle">Signup Form</p>
+      </div>
+      <div class="spacer" style="width: 300px; height: 38px;"></div>
+      <ion-list>
+        <label class="item item-input item-stacked-label itemBorder">
+          <span class="input-label">Username</span>
+          <input class="inputBoxBackground" required type="text" placeholder="Enter username....." ng-model="signUpData.username">
+        </label>
+        <label class="item item-input item-stacked-label itemBorder">
+          <span class="input-label">Email</span>
+          <input class="inputBoxBackground" required type="email" placeholder="Enter email....." ng-model="signUpData.emailId">
+        </label>
+        <label class="item item-input item-stacked-label itemBorder">
+          <span class="input-label">Phone No.</span>
+          <input class="inputBoxBackground" required mask='+999999999999' type="tel" placeholder="Enter phone number....." ng-model="signUpData.phone">
+        </label>
+        <label class="item item-input item-stacked-label itemBorder">
+          <span class="input-label">Password</span>
+          <input class="inputBoxBackground" required type="password" placeholder="Enter password....." ng-model="signUpData.password">
+        </label>
+      </ion-list>
+      <div class="spacer" style="height: 40px;"></div>
+      <div class="row">
+        <div class="col">
+          <button ng-click="back()" class="button icon-left ion-android-arrow-back button-dark button-block">Back</button>
+        </div>
+        <div class="col">
+          <button ng-click="signUp()" class="button icon-right ion-person-add button-balanced button-block">Sign Up</button>
+        </div>
+      </div>
+
+
+    </div>
+  </ion-content>
+</ion-view>
