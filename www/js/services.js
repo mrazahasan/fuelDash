@@ -7,8 +7,8 @@ angular.module('app.services', [])
 }])
 
 .service('APIService', ['$http','$ionicLoading',function($http,$ionicLoading){
-    //var urlMaster = "https://nodejsfirstapi.herokuapp.com/api"; // live URL
-    var urlMaster = "http://127.0.0.1:5000/api"; //Laptop URL
+    var urlMaster = "https://nodejsfirstapi.herokuapp.com/api"; // live URL
+    //var urlMaster = "http://127.0.0.1:5000/api"; //Laptop URL
     return {
 			_http : function(config,loadObj){
 
