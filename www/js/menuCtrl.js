@@ -7,6 +7,14 @@ controllers.controller('menuCtrl', ['$scope', // The following is the constructo
             API.storage.set('isLoggedIn', false, false);
             $scope.$state.go("login");
         };
-
+        if (window.StatusBar) {
+            // org.apache.cordova.statusbar required
+            if (cordova.platformId == 'android') {
+                StatusBar.backgroundColorByHexString("#a790f1");
+            }
+            else {
+                StatusBar.styleDefault();
+            }
+        }
     }
 ]);
